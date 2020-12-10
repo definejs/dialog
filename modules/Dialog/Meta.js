@@ -45,7 +45,7 @@ module.exports = {
             'data': {},                 //供 this.data() 方法使用
 
             'scroller': null,           //针对移动端的滚动器。
-            'masker': null,             //Mask 的实例，重复使用。
+            'masker': null,             //Masker 的实例，重复使用。
             'emitter': null,            //事件驱动器。
             'this': null,               //当前实例，方便内部使用。
             '$': null,                  //组件最外层的 DOM 节点的 jQuery 实例。
