@@ -1,6 +1,6 @@
 ﻿
 module.exports = `
-<div id="{id}" class="definejs-dialog {cssClass}" style="{style} display: none;">
+<div id="{id}" class="definejs-Dialog {cssClass}" style="{style} display: none;">
     <template name="header" placeholder="header">
         <header id="{headerId}">
             {title}
