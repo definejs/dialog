@@ -1,6 +1,6 @@
 {
   "name": "@definejs/dialog",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {},
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@definejs/emitter": "^1.0.0",
+    "@definejs/id-maker": "^1.0.1",
     "@definejs/masker": "^1.0.0",
     "@definejs/object": "^1.1.0",
-    "@definejs/string": "^1.0.0",
     "@definejs/style": "^1.0.0",
     "@definejs/template": "^1.0.0",
     "jquery": "^3.5.1"

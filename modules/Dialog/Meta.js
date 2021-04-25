@@ -1,14 +1,11 @@
 ﻿
-const $String = require('@definejs/string');
-
-const prefix = 'definejs-dialog-';    //用于生成组件 id 的前缀部分。
-const suffix = 4;                 //用于生成组件 id 的随机部分的长度。
+const IDMaker = require('@definejs/id-maker');
 
 
 
 module.exports = {
     create(config, others) {
-        let id = $String.randomId(prefix, suffix);
+        let maker = new IDMaker(config.idPrefix);
         let buttons = config.buttons || [];
 
 
@@ -16,12 +13,13 @@ module.exports = {
             return item == 'string' ? { 'text': item, } : item;
         });
 
+
         let meta = {
-            'id': id,
-            'headerId': $String.randomId(prefix, 'header-', suffix),
-            'articleId': $String.randomId(prefix, 'article-', suffix),
-            'contentId': $String.randomId(prefix, 'content-', suffix),
-            'footerId': $String.randomId(prefix, 'footer-', suffix),
+            'id': maker.next(),
+            'headerId': maker.next('header'),
+            'articleId': maker.next('article'),
+            'contentId': maker.next('content'),
+            'footerId': maker.next('footer'),
 
             'Masker': config.Masker,            //遮罩层的构造函数。 由外面按需要传入，从而避免内部关联加载。 针对移动端，如果传入了则使用。
             'Scroller': config.Scroller,        //滚动器的构造函数，由外面按需要传入，从而避免内部关联加载。 针对移动端，如果传入了则使用。

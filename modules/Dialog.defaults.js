@@ -6,6 +6,11 @@ const Masker = require('@definejs/masker');
 */
 module.exports = {
     /**
+    * 生成组件时的 id 前缀。
+    * 建议保留现状。
+    */
+    idPrefix: 'definejs-Dialog',
+    /**
     * 遮罩层的构造函数。
     * 移动端需要在外部加载 Masker 模块后传入。
     */
